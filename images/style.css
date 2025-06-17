@@ -1,0 +1,293 @@
+
+ /*Reset các thuộc tính mặc định của các thẻ */
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+}
+
+ /*Reset các thuộc tính mặc định của các thẻ */
+
+
+header {
+    /* background-color: black; */
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ffffff4a;
+    
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: all 0.5s;
+    font-family: "Oswald", sans-serif;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+}
+
+.logo i {
+    font-size: 32px;
+}
+
+.logo span {
+    font-size: 30px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+}
+
+.menu ul li.active a{
+    color: red;
+}
+
+.menu ul li:hover a { /* hover active when user move pointer to it */
+    color: red;
+}
+
+/* carousel */
+#carousel {
+    background-image: url(./../images/home_slider.jpg);
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex; /* đưa tất cả các con của thẻ lên cùng 1 dòng */
+    justify-content: center; /*canh giữa theo trục ngang*/
+    align-items: center; /*cạnh giữa theo trục đứng*/
+    text-align: center;
+}
+
+.carousel__content p {
+    color: white;
+    font-size: 1rem;
+}
+
+.carousel__content h1 {
+    color: white;
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+.carousel__content button {
+    background-color: #e62b4a;
+    color: white;
+    padding: 10px 30px;
+    font-size: 0.6rem;
+    border: 1px solid #e62b4a;
+    margin-top: 0.6rem;
+}
+
+.carousel__content button:hover{
+    background-color: #AF2239;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.carousel__content .down__arrow {
+    margin-top: 1.6rem;
+    color: white;
+}
+.py-3 {
+    padding: 3rem 0;
+} /* padding trục y 3rem
+
+/* Services */
+#services {
+    background-color: black;
+    color: white;
+}
+
+.title {
+    text-align: center;
+}
+
+.title p:first-of-type {
+    color: #e62b4a;
+    font-size: 0.5rem;
+    font-weight: 400;
+}
+
+.title p:last-of-type {
+    color: #9D9C9D;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.title h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.services__item {
+    background-color: white;
+    width: 215px;
+    height: 230px;
+    margin: 0 10px;
+    color: grey;
+    display: flex !important; /* uu tien hon so voi cua thu vien */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    position: relative; /* chỉ định cha khi dùng position absolute */
+}
+
+.services__item p {
+    font-size: 0.7rem;
+}
+
+.services__slider {
+    display: flex;
+}
+
+.services__item::after {
+    content: "";
+    width: 5px;
+    height: 0;
+    background-color: red;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+} /*tạo ra một thẻ sau đó dùng css */
+
+.services__item:hover::after {
+    height: 100%;
+    transition: all 0.5s;
+}
+
+/* blog */
+
+#blog .title {
+    margin: 2rem 0;
+}
+
+#blog .title p:first-of-type {
+    color: gray;
+}
+
+#blog .title p:last-of-type {
+    font-size: 0.5rem;
+}
+
+.slick-dots li button::before {
+    font-size: 12px;
+    color: white;
+}
+
+.slick-dots li.slick-active button::before {
+    color: red;
+}
+
+.blog__content {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* chia 1 dòng thành 4 cột */
+    /* or repeat(4, 1fr) */
+    gap: 1rem;
+    /* cách đều item trong content */
+}
+
+.blog__content .blog__item  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    /* fit lại image đẹp */
+    filter: contrast(50%);
+    /* làm mờ hình */
+}
+
+.blog__item-1 {
+    grid-column: 1 / span 2; /* tại vị trì số 1 gom 2 cột */
+    grid-row: 1 / span 2; /* gom 2 dòng */
+}
+
+.blog__item {
+    position: relative;
+}
+.blog__item-10 {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+}
+
+.blog__item .overlay {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.blog__item .overlay .overlay__icon {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.blog__item .overlay .overlay__text {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    transform: translateY(30px);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.blog__item .overlay .overlay__icon i {
+    font-size: 16px;
+    background-color: white;
+    padding: 0.5rem;
+    transition: 0.5s;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.blog__item:hover .overlay .overlay__icon i {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.blog__item .overlay .overlay__icon i:hover {
+    background-color: black;
+    color: white;
+}
+
+.blog__item:hover .overlay .overlay__text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.blog__item:hover .overlay {
+    opacity: 0.3;
+}
